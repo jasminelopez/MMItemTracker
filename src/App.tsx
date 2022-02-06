@@ -1,15 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Masks from './page/components/sections/masks'
+import Tracker from './page'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        tracker goes here
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Tracker />
+		</div>
+	)
 }
 
-export default App;
+export default App
