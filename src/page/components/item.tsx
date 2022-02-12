@@ -21,7 +21,7 @@ function Item({ label, img }: ItemProps) {
 	}
 
 	return (
-		<ItemContainer onClick={toggleItem}>
+		<ItemContainer found={found} onClick={toggleItem}>
 			<img src={img} />
 		</ItemContainer>
 	)
@@ -29,32 +29,20 @@ function Item({ label, img }: ItemProps) {
 
 export default Item
 
-const breatheAnimation = keyframes`
-	0% { height: 100px; width: 100px; }
-	30% { height: 400px; width: 400px; opacity: 1 }
-	40% { height: 405px; width: 405px; opacity: 0.3; }
-	100% { height: 100px; width: 100px; opacity: 0.6; }
-`
-interface itemContainerProps {
-	active: boolean
-}
-
-const ItemContainer = styled.div`
-	display: flexbox;
-
-	animation-name: ${breatheAnimation};
-	animation-duration: 8s;
-`
-
-// breath-animation {
+// const breatheAnimation = keyframes`
 // 	0% { height: 100px; width: 100px; }
 // 	30% { height: 400px; width: 400px; opacity: 1 }
 // 	40% { height: 405px; width: 405px; opacity: 0.3; }
 // 	100% { height: 100px; width: 100px; opacity: 0.6; }
-//    }
+// `
+// animation-name: ${breatheAnimation};
 
-// 0% {transform: rotate(10deg);}
-// 25% {transform: rotate(-10deg);}
-// 50% {transform: rotate(20deg);}
-// 75% {transform: rotate(-5deg);}
-// 100% {transform: rotate(0deg);}
+interface itemContainerProps {
+	found: boolean
+}
+
+const ItemContainer = styled.div<itemContainerProps>`
+	display: flexbox;
+
+	opacity: ${(p) => (p.found ? '100%' : '50%')};
+`

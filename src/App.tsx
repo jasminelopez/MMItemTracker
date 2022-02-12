@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import Masks from './page/components/sections/masks'
+import Masks from './page/components/sections/masks/masks'
 import Tracker from './page'
 
 function App() {
