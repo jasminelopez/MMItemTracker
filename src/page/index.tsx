@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Masks from './components/sections/masks/masks'
+import Quest from './components/sections/quest/quest'
 import Songs from './components/sections/songs/songs'
 
 function Tracker() {
@@ -8,6 +9,7 @@ function Tracker() {
 		<TrackerContainer>
 			<Masks />
 			<Songs />
+			<Quest />
 		</TrackerContainer>
 	)
 }

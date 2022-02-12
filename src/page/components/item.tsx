@@ -43,6 +43,5 @@ interface itemContainerProps {
 
 const ItemContainer = styled.div<itemContainerProps>`
 	display: flexbox;
-
 	opacity: ${(p) => (p.found ? '100%' : '50%')};
 `
